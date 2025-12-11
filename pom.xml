@@ -1,0 +1,108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>cyclos</groupId>
+  <artifactId>own_BDD</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+   <properties>
+      <maven.compiler.source>11</maven.compiler.source>
+      <maven.compiler.target>11</maven.compiler.target>
+      <!-- Optional: Set a specific compiler plugin version to prevent implicit defaults -->
+      <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
+  </properties>
+  
+  <dependencies>
+	  <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-api</artifactId>
+    <version>4.38.0</version>
+</dependency>
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.38.0</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>5.4.1</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>5.4.1</version>
+</dependency>
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.3.0</version>
+</dependency>
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>7.32.0</version>
+</dependency>
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-testng</artifactId>
+        <version>7.32.0</version>
+    </dependency>
+    
+    <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-server</artifactId>
+    <version>3.141.59</version>
+</dependency>
+  </dependencies>
+  
+<build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.5.4</version>
+        <configuration>
+          <includes>
+            <include>TestRunner.java</include>
+          </includes>
+          <parallel>classes</parallel>
+         <threadcount>4</threadcount>
+        </configuration>
+      </plugin>
+      
+        <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven.compiler.plugin.version}</version>
+    </plugin>
+      
+    <plugin>
+   <groupId>net.masterthought</groupId>
+   <artifactId>maven-cucumber-reporting</artifactId>
+   <version>5.9.0</version>
+   <executions>
+     <execution>
+	<id>execution</id>
+	<phase>verify</phase>
+	<goals>
+	    <goal>generate</goal>
+	</goals>
+	<configuration>		
+	<projectName>Cyclos Own BDD</projectName>    
+        <skip>false</skip>		
+        <outputDirectory>E:\Selenium web driver-utlities\cyclos_own_bdd_Project\target\report</outputDirectory>	     
+        <inputDirectory>E:\Selenium web driver-utlities\cyclos_own_bdd_Project\target\report</inputDirectory>
+        <jsonFiles>
+          <param>**/*.json</param>
+        </jsonFiles>	
+        <mergeFeaturesById>false</mergeFeaturesById>
+        <mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>
+        <checkBuildResult>false</checkBuildResult>		    			  
+        </configuration>
+   </execution>
+  </executions>
+ </plugin>
+ </plugins>
+</build>
+
+</project>

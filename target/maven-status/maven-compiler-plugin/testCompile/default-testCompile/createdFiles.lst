@@ -1,0 +1,10 @@
+definations_classes\Hooks.class
+definations_classes\AddContact.class
+definations_classes\DirectoryPayment.class
+definations_classes\LoginPositiveAndNegitive.class
+cyclos\groups\TestGroups.class
+cyclos_test_scripts\DirectoryPayment.class
+cyclos_test_scripts\PaymentSchedule.class
+cyclos_test_scripts\CyclosLogin.class
+definations_classes\DirectoryAdvertisements.class
+runner\TestRunner.class

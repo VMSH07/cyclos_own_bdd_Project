@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [cyclos_own_project_bdd by groups]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="GRP-smoke,sanity(failed)">
+    <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+        <include name="sanity"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="cyclos.groups.TestGroups">
+        <methods>
+          <include name="setup"/>
+          <include name="smokeGroup"/>
+          <include name="quit"/>
+          <include name="sanityGroup"/>
+        </methods>
+      </class> <!-- cyclos.groups.TestGroups -->
+    </classes>
+  </test> <!-- GRP-smoke,sanity(failed) -->
+</suite> <!-- Failed suite [cyclos_own_project_bdd by groups] -->
