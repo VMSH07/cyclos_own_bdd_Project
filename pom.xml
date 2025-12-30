@@ -90,7 +90,7 @@
 	<configuration>		
 	<projectName>Cyclos Own BDD</projectName>    
         <skip>false</skip>		
-        <outputDirectory>${project.build.directory}/cucumber-html-reports</outputDirectory>	     
+        <outputDirectory>${project.build.directory}</outputDirectory>	     
         <inputDirectory>${project.build.directory}</inputDirectory>
         <jsonFiles>
           <param>${project.build.directory}/cucumber.json</param>
