@@ -77,7 +77,7 @@ public class AddContact extends CyclosDriverClass{
 		//for each loop
 		for(WebElement ddContact:ddContacts)
 		{
-//			if(ddContact.getText().equals("Cyclos Tester"))
+//			if(ddContact.getText().equals("Testuser"))
 //			{
 				ddContact.click();
 				break;
