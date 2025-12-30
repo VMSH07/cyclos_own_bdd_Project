@@ -90,10 +90,10 @@
 	<configuration>		
 	<projectName>Cyclos Own BDD</projectName>    
         <skip>false</skip>		
-        <outputDirectory>${project.build.directory}</outputDirectory>	     
-        <inputDirectory>${project.build.directory}</inputDirectory>
+        <outputDirectory>${basedir}/target/cucumber-html-reports</outputDirectory>	     
+        <inputDirectory>${basedir}/target</inputDirectory>
         <jsonFiles>
-          <param>${project.build.directory}/cucumber.json</param>
+          <param>${basedir}/target/cucumber.json</param>
         </jsonFiles>	
         <mergeFeaturesById>false</mergeFeaturesById>
         <mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>
