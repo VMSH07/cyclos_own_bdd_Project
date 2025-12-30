@@ -90,10 +90,10 @@
 	<configuration>		
 	<projectName>Cyclos Own BDD</projectName>    
         <skip>false</skip>		
-        <outputDirectory>E:\Selenium web driver-utlities\cyclos_own_bdd_Project\target\report</outputDirectory>	     
-        <inputDirectory>E:\Selenium web driver-utlities\cyclos_own_bdd_Project\target\report</inputDirectory>
+        <outputDirectory>${project.build.directory}/report</outputDirectory>	     
+        <inputDirectory>${project.build.directory}</inputDirectory>
         <jsonFiles>
-          <param>**/*.json</param>
+          <param>${project.build.directory}/cucumber.json</param>
         </jsonFiles>	
         <mergeFeaturesById>false</mergeFeaturesById>
         <mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>
