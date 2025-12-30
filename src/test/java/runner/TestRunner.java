@@ -12,8 +12,8 @@ import io.cucumber.testng.CucumberOptions;
 		glue={"definations_classes"},
 		//dryRun = true,
         plugin = {"pretty",
-                  "html:target/cucumber.html",
-                  "json:target/cucumber.json"
+                  "html:target/report/cucumber.html",
+                  "json:target/report/cucumber.json"
                  },
 	    tags= "@AddContact or @Directory and @Advertisements"
 
