@@ -38,26 +38,26 @@ public class CyclosDriverClass {
 		if(browser.equals("chrome"))
 		{	
 		  //open chrome browser
-		  //d=new ChromeDriver();
+		  d=new ChromeDriver();
 			
 		  //Remote execution chrome
-		  d=new RemoteWebDriver(new URL ("http://20.244.45.161:4444/wd/hub"), new ChromeOptions());
+		  //d=new RemoteWebDriver(new URL ("http://20.244.45.161:4444/wd/hub"), new ChromeOptions());
 		}
 		else if(browser.equals("ff"))
 		{
 			//open chrome browser
-			 //d=new FirefoxDriver();
+			 d=new FirefoxDriver();
 			
 			//Remote execution fire fox
-			d=new RemoteWebDriver(new URL ("http://20.244.45.161:4444/wd/hub"), new FirefoxOptions());
+			//d=new RemoteWebDriver(new URL ("http://20.244.45.161:4444/wd/hub"), new FirefoxOptions());
 		}
 		else if(browser.equals("edge"))
 		{
 			//open chrome browser
-			//d=new EdgeDriver();
+			d=new EdgeDriver();
 			
 			//Remote execution edge
-			d=new RemoteWebDriver(new URL ("http://20.244.45.161:4444/wd/hub"), new EdgeOptions());
+			//d=new RemoteWebDriver(new URL ("http://20.244.45.161:4444/wd/hub"), new EdgeOptions());
 		}
 		
 		//maximize window
