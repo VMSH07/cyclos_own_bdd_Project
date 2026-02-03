@@ -62,11 +62,10 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.5.4</version>
         <configuration>
-          <includes>
-            <include>TestRunner.java</include>
-          </includes>
-          <parallel>classes</parallel>
-         <threadcount>4</threadcount>
+          <suiteXmlFiles>
+                    <!-- Specify the path to your suite file relative to the project root -->
+                    <suiteXmlFile>src/test/resources/xmlfiles/Cyclos_Bdd.xml</suiteXmlFile>
+                </suiteXmlFiles>
         </configuration>
       </plugin>
       
@@ -90,8 +89,8 @@
 	<configuration>		
 	<projectName>Cyclos Own BDD</projectName>    
         <skip>false</skip>		
-        <outputDirectory>${basedir}/target/report</outputDirectory>	     
-        <inputDirectory>${basedir}/target/report</inputDirectory>
+        <outputDirectory>E:\Selenium web driver-utlities\cyclos_own_bdd_Project\target\report</outputDirectory>	     
+        <inputDirectory>E:\Selenium web driver-utlities\cyclos_own_bdd_Project\target\report</inputDirectory>
         <jsonFiles>
           <param>**/*.json</param>
         </jsonFiles>	
