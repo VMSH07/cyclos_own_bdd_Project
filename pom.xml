@@ -89,8 +89,8 @@
 	<configuration>		
 	<projectName>Cyclos Own BDD</projectName>    
         <skip>false</skip>		
-        <outputDirectory>E:\Selenium web driver-utlities\cyclos_own_bdd_Project\target\report</outputDirectory>	     
-        <inputDirectory>E:\Selenium web driver-utlities\cyclos_own_bdd_Project\target\report</inputDirectory>
+        <outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory>	     
+        <inputDirectory>${project.build.directory}/report</inputDirectory>
         <jsonFiles>
           <param>**/*.json</param>
         </jsonFiles>	
