@@ -10,7 +10,7 @@
     </test>
 
     <test name="Run Directory Feature">
-        <parameter name="cucumber.filter.tags" value="@PayThroughDirectory"/>
+        <parameter name="cucumber.filter.tags" value="@Directory"/>
         <classes>
             <class name="runner.TestRunner"/>
         </classes>
