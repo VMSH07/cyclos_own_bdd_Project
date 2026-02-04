@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Cucumber Ordered Execution Suite" parallel="classes" thread-count="4" preserve-order="true">
+    
+    <test name="Run Contacts Feature">
+        <parameter name="cucumber.filter.tags" value="@AddContact"/>
+        <classes>
+            <class name="runner.TestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Run Directory Feature">
+        <parameter name="cucumber.filter.tags" value="@PayThroughDirectory"/>
+        <classes>
+            <class name="runner.TestRunner"/>
+        </classes>
+    </test>
+</suite>
+            
