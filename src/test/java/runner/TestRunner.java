@@ -17,29 +17,29 @@ import io.cucumber.testng.CucumberOptions;
         		  "pretty",
                   "html:target/report/cucumber.html",
                   "json:target/report/cucumber.json"
-                 }
-	    //tags= "@AddContact or @Directory and @Advertisements"
+                 },
+	    tags=/*"@LoginPositiveNegitive*/"@Contacts or @Directory"
 
 		)
  
 public class TestRunner extends AbstractTestNGCucumberTests
 {
-	 @BeforeClass(alwaysRun = true)
-	 @Parameters("cucumber.filter.tags")
-	 public void setTags(String tags) {
-	 System.setProperty("cucumber.filter.tags", tags);
-	 }
-	 
-	 @Override
-	 @DataProvider(parallel = false)
-	 public Object[][] scenarios() {
-	     return super.scenarios();
-	 }
-	 @AfterSuite
-		public static void afterSuite()
-		{
-			//close browser
-		    CyclosDriverClass.close();
-		}
+//	 @BeforeClass(alwaysRun = true)
+//	 @Parameters("cucumber.filter.tags")
+//	 public void setTags(String tags) {
+//	 System.setProperty("cucumber.filter.tags", tags);
+//	 }
+//	 
+//	 @Override
+//	 @DataProvider(parallel = true)
+//	 public Object[][] scenarios() {
+//	     return super.scenarios();
+//	 }
+//	 @AfterSuite
+//		public static void afterSuite()
+//		{
+//			//close browser
+//		    CyclosDriverClass.close();
+//		}
 }
 

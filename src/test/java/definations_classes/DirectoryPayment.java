@@ -3,11 +3,15 @@ package definations_classes;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import cyclos_config_files.CyclosDriverClass;
 import cyclos_pageobjects.CyclosDirectoryPage;
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import reusible_methods.ReusibleMethodForWait;
 import reusible_methods.Synchronizations;
 
 public class DirectoryPayment extends CyclosDriverClass{
@@ -21,15 +25,33 @@ public class DirectoryPayment extends CyclosDriverClass{
 	public void user_clicks_on_directory_option_from_dashboard() {
 		//create variable to CyclosDirectoryPage
 		cdp=new CyclosDirectoryPage(d);
+			
+		if(ReusibleMethodForWait.elementPresent(d, By.cssSelector("div .quick-access-container div[class^='quick-access-item-container']:nth-child(2)")))
+		{
+			
+		    //verify presence of directory
+		    assertTrue(cdp.lnkDirectory.isDisplayed());
 				
-		//verify presence of directory
-		assertTrue(cdp.lnkDirectory.isDisplayed());
+		    //click on directory
+		    cdp.lnkDirectory.click();
 				
-		//click on directory
-		cdp.lnkDirectory.click();
+		    //verify presence of business directory
+		    assertTrue(cdp.lnkBusinessDirectory.isDisplayed());
+		}
+		else
+		{
+			//click on dashboard 
+			cdp.lnkDashboard.click();
+			
+			 //verify presence of directory
+		    assertTrue(cdp.lnkDirectory.isDisplayed());
 				
-		//verify presence of business directory
-		assertTrue(cdp.lnkBusinessDirectory.isDisplayed());
+		    //click on directory
+		    cdp.lnkDirectory.click();
+				
+		    //verify presence of business directory
+		    assertTrue(cdp.lnkBusinessDirectory.isDisplayed());
+		}
 	}
 	
 	@When("User searches for the contact from keywords text field {string} .")
@@ -49,7 +71,7 @@ public class DirectoryPayment extends CyclosDriverClass{
 		//store contact details in variable
 		cName=d.findElement(cdp.contact).getText();
 						
-		//Click on serached contact
+		//Click on searched contact
 		d.findElement(cdp.contact).click();
 	}
 	@When("User click on make payment link and navigates to payment to user and verify contact {string}.")
@@ -65,18 +87,18 @@ public class DirectoryPayment extends CyclosDriverClass{
 	}
 	@When("User enters amount {string} discription {string} and clicks on next button.")
 	public void user_enters_amount_discription_and_clicks_on_next_button(String amount, String discription) {
-		//Type ammount in to ammount text field
+		//Type ammount in to amount text field
 		cdp.txtAmount.sendKeys(amount);
 				
 		//set discription
-		cdp.txtDiscription.sendKeys(discription);
+		cdp.txtDiscription.sendKeys(discription);	
 				
 		//click on next
 		cdp.btnNext.click();
 	}
 	@When("User clicks on confirm button.")
 	public void user_clicks_on_confirm_button() {
-		//verify ammount to be sent
+		//verify amount to be sent
 		assertTrue(cdp.lblAmount.isDisplayed());
 				
 		//click on conform

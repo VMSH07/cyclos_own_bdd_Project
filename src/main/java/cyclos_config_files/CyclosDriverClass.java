@@ -18,7 +18,7 @@ import excel_utils.ReadAndSetData;
 
 public class CyclosDriverClass {
 	
-	//initilize webdriver instantly
+	//Initialize webdriver instantly
 	public static WebDriver d;
 	 
 	//instance object creation to read data from sheet
@@ -27,7 +27,7 @@ public class CyclosDriverClass {
 	//Read data from login sheet
 	String excel1="E:\\Selenium web driver-utlities\\cyclos_own_bdd_Project\\src\\main\\resources\\CyclonLogin.xlsx";
 	
-	//partial initilizing browser it test method is created
+	//partial initializing browser it test method is created
 	static String browser="chrome";
 	
 	//@Parameters("browser")

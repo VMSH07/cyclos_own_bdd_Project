@@ -57,13 +57,13 @@ public class CyclosDirectoryPage{
 	@FindBy(css=".nav-item:nth-child(2) > .nav-item-text")public WebElement lnkAdvertisements;
 	
 	//Button Show advertisements
-	@FindBy(css=".btn > span")public WebElement btnShowadvertisements;
+	@FindBy(xpath="//a[@href=\"/ui/marketplace/search\"]/div")public WebElement btnShowadvertisements;
 	
 	//advertisement text
 	@FindBy(css=".card-text")public WebElement txtadvertisement;
 	
 	//Text title
-	@FindBy(css=".label-on-side:nth-child(2) .d-flex")public WebElement txtTitle;
+	@FindBy(css=".label-on-side:nth-child(1) .d-flex")public WebElement txtTitle;
 	
 	//Add favorites
 	@FindBy(css="heading-actions:nth-child(1) heading-action-button:nth-child(1) div")public WebElement btnAddOrRemoveFav;
@@ -73,6 +73,9 @@ public class CyclosDirectoryPage{
 	
 	//dashboard
 	@FindBy(id="menu_dashboard")public WebElement lnkDashboard;
+	
+	//Search advertisement
+	@FindBy(xpath="//div[contains(@class,'title-text flex-grow-1 d-flex')]")public WebElement lbladvertisement;
     
 	
 	//constrictor to store PageFactory class and inItElements method

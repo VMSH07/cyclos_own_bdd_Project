@@ -69,7 +69,7 @@ public class AddContact extends CyclosDriverClass{
 		ccp=new CyclosContactsPage(d);
 		
 		//search for the contact
-		ccp.txtContactSearch.sendKeys("Test");
+		ccp.txtContactSearch.sendKeys("alexandre");
 		
 		//select from dashboard
 		List<WebElement> ddContacts= (List<WebElement>) ccp.ddContactSearch;

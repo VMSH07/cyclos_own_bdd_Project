@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="classes" name="Failed suite [Cucumber Ordered Execution Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="4" parallel="classes" name="Run Contacts Feature(failed)">
+    <parameter name="cucumber.filter.tags" value="@AddContact"/>
+    <classes>
+      <class name="runner.TestRunner">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="setUpClass"/>
+          <include name="setTags"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- runner.TestRunner -->
+    </classes>
+  </test> <!-- Run Contacts Feature(failed) -->
+  <test thread-count="4" parallel="classes" name="Run Directory Feature(failed)">
+    <parameter name="cucumber.filter.tags" value="@Directory"/>
+    <classes>
+      <class name="runner.TestRunner">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+          <include name="setTags"/>
+        </methods>
+      </class> <!-- runner.TestRunner -->
+    </classes>
+  </test> <!-- Run Directory Feature(failed) -->
+</suite> <!-- Failed suite [Cucumber Ordered Execution Suite] -->

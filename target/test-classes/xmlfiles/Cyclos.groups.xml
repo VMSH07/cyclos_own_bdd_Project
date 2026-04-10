@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="cyclos_own_project_bdd by groups" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="GRP-smoke,sanity" verbose="2">
+	  <parameter name="browser" value="chrome"></parameter>
+    <groups>
+      <run>
+        <include name="smoke"/>
+        <include name="sanity"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="cyclos.groups.TestGroups"/>
+    </classes>
+  </test> <!-- GRP-smoke,sanity -->
+</suite> <!-- cyclos_own_project_bdd by groups -->

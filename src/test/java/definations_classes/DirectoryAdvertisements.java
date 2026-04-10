@@ -2,7 +2,10 @@ package definations_classes;
 
 import static org.testng.Assert.*;
 
+import java.time.Duration;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import cyclos_config_files.CyclosDriverClass;
 import cyclos_pageobjects.CyclosDirectoryPage;
@@ -35,6 +38,10 @@ public class DirectoryAdvertisements extends CyclosDriverClass{
 	}
 	@When("User searches for {string} verifies {string} advertisement and clicks on it.")
 	public void user_searches_for_verifies_advertisement_and_clicks_on_it(String keyWord, String advertisement) {
+		
+		//explicitly wait
+		Synchronizations.explictly(d,ExpectedConditions.textToBePresentInElement(cdp.lbladvertisement,"Search advertisements"));
+		
 		//search with keyword
 		cdp.txtKeyWords.sendKeys(keyWord);
 		
