@@ -88,8 +88,8 @@
 	<configuration>		
 	<projectName>Cyclos Own BDD</projectName>    
         <skip>false</skip>		
-        <outputDirectory>C:\Users\harsha.vv\eclipse-workspace\cyclos_own_bdd_Project-main\target\report</outputDirectory>	     
-        <inputDirectory>C:\Users\harsha.vv\eclipse-workspace\cyclos_own_bdd_Project-main\target\report</inputDirectory>
+        <outputDirectory>${project.build.directory}/report</outputDirectory>	     
+        <inputDirectory>${project.build.directory}/report</inputDirectory>
         <jsonFiles>
           <param>**/*.json</param>
         </jsonFiles>	
